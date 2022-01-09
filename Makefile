@@ -25,6 +25,7 @@ BIN:=$(BINDIR)/main
 .PHONY: all clean
 
 all: $(BIN)
+	$(HIDE)mkdir -p $(DATADIR)
 
 $(BIN): $(OBJS) $(DEPS) | $(BINDIR)
 	$(HIDE)$(CC) $(CFLAGS) $(OBJS) -o $@ 
